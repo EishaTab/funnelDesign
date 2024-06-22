@@ -1,0 +1,92 @@
+@font-face {
+  font-family: Satoshi;
+  src: url("../fonts/Satoshi-Variable.ttf");
+}
+@font-face {
+  font-family: segoepr;
+  src: url("../fonts/segoepr.ttf");
+}
+body {
+  font-family: Satoshi;
+}
+.bg__topcurve {
+  background-image: url("../images/cut.png");
+  background-position: center;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.text-main {
+  color: #1177ff;
+}
+.banner_title h1 {
+  font-size: 48px;
+}
+.banner_title h2 {
+  font-size: 40px;
+}
+.banner_title p {
+  font-size: 24px;
+}
+.banner__section {
+  padding-left: 100px;
+}
+.banner__column_2 {
+  left: 105px;
+}
+.bg-main {
+  background-color: #1177ff;
+}
+.banner__form .title__form__banner {
+  font-weight: 700;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.banner__form .form-control {
+  width: fit-content;
+  width: 50%;
+  font-weight: 700;
+}
+.bg_bluelight {
+  background-color: #e0eeff;
+}
+.simple__steps__sec {
+  max-width: 1138.8px;
+}
+.simple__steps__sec_main {
+  padding: 76px 15px;
+}
+.simple__steps__sec_main h1 {
+  font-size: 92px;
+  color: #1177ff;
+  font-weight: bolder;
+}
+.simple__steps__sec_main h6 {
+  font-size: 32px;
+  color: #303030;
+}
+.find_best_stocks {
+  color: #303030;
+  font-size: 30px;
+}
+.segoepr{
+    font-family: segoepr;
+}
+.truly__steps{
+    width: 295px;
+    height: 295px;
+    border-radius: 200px;
+}
+.truly__steps1{
+    background: #1177FF66;
+}
+.truly__steps2{
+    background-color: #7A11FF;
+}
+.truly__steps3{
+    background-color: #00D749;
+}
+.truly__steps .step__text{
+    font-size: 52px;
+    line-height: 1;
+}
