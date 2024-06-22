@@ -1,0 +1,182 @@
+:root {
+    --bg_blue_main: #1177FF
+}
+
+.bt_main {
+    width: 100vw;
+    background-image: url('../images/bt.png');
+    height: 50px;
+}
+
+.p_main {
+    padding:50px 0 0 0;
+}
+
+.color_blue {
+    color: var(--bg_blue_main);
+}
+
+.gap_24 {
+    gap: 24px;
+}
+
+.fs-72 {
+    font-size: 72px;
+}
+
+.fs-64 {
+    font-size: 64px;
+}
+
+.timer_count {
+    font-size: 84px;
+    line-height: 1;
+    text-wrap: nowrap;
+}
+
+.timer_text {
+    font-size: 32px;
+}
+
+.timer {
+    background-color: var(--bg_blue_main);
+    width: fit-content;
+    margin: auto;
+    position: relative;
+    padding: 14px 64px;
+    color: white;
+    border-radius: 8px;
+    font-size: 32px;
+}
+
+.timer::before,
+.timer::after {
+    content: "";
+    background-image: url('../images/curly_arrow.png');
+    background-size: contain;
+    width: 155px;
+    height: 170px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-repeat: no-repeat;
+}
+
+.timer::before {
+    left: -140px;
+}
+
+.timer::after {
+    left: calc(100%);
+    /* Adjust the distance from the right edge */
+    transform: translateY(-50%) rotateY(180deg);
+    /* Flip horizontally */
+}
+
+.break_text {
+    font-size: 40px;
+}
+
+.upgrade {
+    font-size: 48px
+}
+
+.after_text {
+    font-size: 36px;
+}
+
+.opp {
+    border-radius: 8px;
+    border: 2px dashed var(--bg_blue_main);
+    background: #1177FF1A;
+    padding: 61px 18px;
+}
+.timer_Cards .card{
+    color: white;
+    padding: 27px 11px;
+    border-radius: 8px;
+    height: 100%;
+}
+.card_green {
+    background: #00D749;
+    position: relative;
+}
+.card_green::before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0px;
+    width: 113px;
+    border-top-left-radius: 8px;
+    height: 85px;
+    background-color: red;
+    clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
+    transform: rotate(0deg);
+    color: white;
+    font-size: 16px;
+    text-align: center;
+}
+.card_green p:first-child{
+    padding-left: 24px;
+    padding-top: 15px;
+}
+.card_green p:nth-child(2){
+    line-height: 1;
+}
+.card_green span{
+    position: absolute;
+    top: 13px;
+    left: 9px;
+    font-size: 14px;
+    transform: rotate(328deg);
+    font-weight: 900;
+
+}
+.card_included {
+    background: #2A64B2;
+}
+.bg-light-blue {
+    background-color: #E0EEFFCC;
+    background-image: url('../images/bg-chart.png');
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    background-position-y: -120px;
+}
+
+.bg-light-blue::after {
+    content: "";
+    background-color: #E0EEFFCC; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.content-wrapper {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+}
+.winners_text{
+    font-size: 32px;
+    font-weight: 32px;
+    padding-bottom: 77px;
+}
+.bg-light-bottom{
+    background: #EFEFEF;
+    width: 100vw;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+@media (max-width: 500px) {
+    .timer::before,
+    .timer::after {
+        display: none;
+    }
+}
