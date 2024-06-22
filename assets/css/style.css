@@ -11,7 +11,7 @@ body {
 }
 .bg__topcurve {
   background-image: url("../images/cut.png");
-  background-position: center;
+  background-position: left;
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
@@ -69,24 +69,312 @@ body {
   color: #303030;
   font-size: 30px;
 }
-.segoepr{
-    font-family: segoepr;
+.segoepr {
+  font-family: segoepr;
 }
-.truly__steps{
-    width: 295px;
-    height: 295px;
+.truly__steps {
+  width: 295px;
+  height: 288px;
+  border-radius: 200px;
+}
+.truly__steps1 {
+  background: #1177ff66;
+}
+.truly__steps2 {
+  background-color: #7a11ff;
+}
+.truly__steps3 {
+  background-color: #00d749;
+}
+.truly__steps .step__text {
+  font-size: 52px;
+  line-height: 1;
+}
+.truly__steps_col p {
+  color: #303030;
+  font-weight: 700;
+  margin-top: 40px;
+  font-size: 32px;
+}
+.simple__steps__sec {
+  padding-top: 101px;
+}
+.curve__v1 {
+  position: absolute;
+  right: -78px;
+  top: -48px;
+}
+.curve__v2 {
+  position: absolute;
+  right: -78px;
+  bottom: 88px;
+}
+.footersection__breakouts {
+  background-color: #1177ff;
+  padding: 75px 0;
+}
+.footersection__breakouts h1 {
+  font-size: 72px;
+}
+.footersection__breakouts_points {
+  padding-top: 51px;
+  font-size: 32px;
+}
+.wfc {
+  width: fit-content;
+}
+.footersection__breakouts_flex {
+  margin-top: 32px;
+}
+.footersection_form {
+  max-width: 800px;
+  margin: auto;
+  padding-top: 68px;
+}
+.btn__unlock {
+  background-color: #00b612;
+  text-transform: uppercase;
+  border: 0px !important;
+  box-shadow: none !important;
+}
+.btn__unlock:hover {
+  background-color: #00b612;
+}
+.text {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  text-align: center;
+}
+
+.line1 {
+  transform: rotate(-45deg);
+  display: block;
+}
+
+.line2 {
+  transform: rotate(-45deg);
+  display: block;
+}
+.worst_case {
+  font-size: 24px;
+  margin-top: 20px;
+}
+.free__curve {
+  right: -120px;
+  width: fit-content;
+  top: -29px;
+}
+@media screen and (min-width: 1300px) and (max-width: 1599px) {
+  .banner__column_2 {
+    width: 80%;
+    left: 86px;
+  }
+  .graph__video {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1000px) and (max-width: 1300px) {
+  .banner__column_2 {
+    width: 85%;
+    left: 57px;
+  }
+  .graph__video {
+    width: 100%;
+  }
+  .banner_title h1 {
+    font-size: 39px;
+  }
+  .banner_title h2 {
+    font-size: 32px;
+  }
+  .banner_title p {
+    font-size: 21px;
+  }
+  .simple__steps__sec_main h1 {
+    font-size: 82px;
+    color: #1177ff;
+    font-weight: bolder;
+  }
+  .truly__steps_col p {
+    color: #303030;
+    font-weight: 700;
+    margin-top: 40px;
+    font-size: 24px;
+  }
+  .footersection__breakouts h1 {
+    font-size: 60px;
+  }
+  .footersection__breakouts_points {
+    padding-top: 51px;
+    font-size: 26px;
+  }
+  .truly__steps {
+    width: 250px;
+    height: 250px;
+    border-radius: 200px;
+  }
+  .truly__steps .step__text {
+    font-size: 36px;
+    line-height: 1;
+  }
+  .banner__form {
+    flex-direction: column;
+  }
+  .banner__form .form-control {
+    width: 100%;
+    font-weight: 700;
+  }
+  .title__form__banner {
+    margin-top: 8px;
+  }
+  .curve__v2 img {
+    width: 90%;
+  }
+  .curve__v2 {
+    position: absolute;
+    right: -98px;
+    bottom: 88px;
+  }
+}
+@media screen and (max-width: 980px) {
+  .banner__section {
+    padding-left: 0;
+  }
+  .banner__section {
+    flex-direction: column-reverse;
+  }
+  .bg__topcurve {
+    height: auto !important;
+    background-image: none;
+  }
+  .banner__column_2 {
+    left: 0;
+  }
+  .bg__topcurve{
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .banner_title{
+    margin: 20px 0;
+  }
+  .banner_title .d-flex {
+    justify-content: center;
+  }
+  .banner__form{
+    justify-content: start !important;
+    width: fit-content;
+    margin: auto;
+  }
+  .banner_title h2 ,.banner_title p{
+    text-align: center;
+  }
+  .curve__v2,.curve__v1{
+    display: none;
+  }
+  .footersection_form {
+    flex-wrap: nowrap;
+  }
+  .footersection_form .col-lg-6{
+width: 50% !important;
+  }
+  .free__curve {
+    right: -86px;
+    width: fit-content;
+    top: -5px;
+    margin-left: auto;
+    display: flex;
+    justify-content: flex-end;
+}
+.free__curve img{
+width: 75%;
+}
+.footersection__breakouts h1 {
+    font-size: 56px;
+}
+.footersection__breakouts_points {
+    padding-top: 0px;
+    font-size: 24px;
+}
+.truly__steps_col{
+    margin-bottom: 30px;
+}
+.graph__video{
+    width: 100%;
+}
+.banner_title h1 {
+    font-size: 28px;
+}
+.banner_title h2 {
+    font-size: 28px;
+}
+.banner_title p {
+    font-size: 20px;
+}
+.banner__form{
+    flex-direction: column;
+}
+.banner__form .form-control {
+    width: fit-content;
+    width: 100%;
+    font-weight: 700;
+}
+.title__form__banner {
+    margin-left: 0 !important;
+    padding-top: 12px;
+}
+.simple__steps__sec_main h1 {
+    font-size: 32px;
+    color: #1177ff;
+    font-weight: bolder;
+}
+.simple__steps__sec_main h6 {
+    font-size: 22px;
+    color: #303030;
+}
+.find_best_stocks {
+    color: #303030;
+    font-size: 21px;
+}
+.simple__steps__sec {
+    padding-top: 50px;
+}
+.truly__steps {
+    width: 250px;
+    height: 250px;
     border-radius: 200px;
 }
-.truly__steps1{
-    background: #1177FF66;
-}
-.truly__steps2{
-    background-color: #7A11FF;
-}
-.truly__steps3{
-    background-color: #00D749;
-}
-.truly__steps .step__text{
-    font-size: 52px;
+.truly__steps .step__text {
+    font-size: 42px;
     line-height: 1;
+}
+.footersection__breakouts {
+    background-color: #1177ff;
+    padding: 35px 15px;
+}
+.footersection__breakouts h1 {
+    font-size: 36px;
+}
+.footersection_form {
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.footersection_form .col-lg-6 {
+    width: 100% !important;
+}
+.btn__unlock {
+    background-color: #00b612;
+    text-transform: uppercase;
+    border: 0px !important;
+    box-shadow: none !important;
+    font-size: 14px;
+    margin-top: 10px;
+}
+.free__curve{
+    display: none;
+}
 }
