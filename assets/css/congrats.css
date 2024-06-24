@@ -346,7 +346,12 @@
         right: -162px;
     }
 }
-
+@media (max-width: 576px) {
+    .card1::after, .card2::after{
+        left: 50%;
+        top: 88%;
+    }
+}
 @media (max-width: 500px) {
     .bt_text {
         font-size: 12px;
@@ -354,7 +359,7 @@
 
     .congrats_text,
     .fs-64 {
-        font-size: 30px;
+        font-size: 35px;
     }
 
     .checklist_text {
@@ -389,4 +394,5 @@
         padding-top: 30px;
         padding-bottom: 30px;
     }
+   
 }
