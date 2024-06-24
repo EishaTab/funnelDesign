@@ -12,6 +12,16 @@
     height: 50px;
 }
 
+.bt_text {
+    font-family: Satoshi;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32.4px;
+    text-align: center;
+    padding-top: 10px;
+
+}
+
 .m-w-fit {
     min-width: fit-content;
 }
@@ -105,6 +115,7 @@
     border: 2px dashed var(--bg_blue_main);
     background: #1177FF1A;
     padding: 61px 18px;
+    overflow: hidden;
 }
 
 .timer_Cards {
@@ -219,6 +230,9 @@
     font-size: 32px;
     font-weight: 32px;
     padding-bottom: 77px;
+    width: fit-content;
+    max-width: 80vw;
+    margin: auto;
 }
 
 .bg-light-bottom {
@@ -241,6 +255,18 @@
     margin: auto;
 }
 
+.winners_text.ca-1::after,
+.banner__form.ca-1::after {
+    content: "";
+    background-image: url(../images/curly_arrow2.png);
+    background-size: contain;
+    width: 170px;
+    height: 115px;
+    position: absolute;
+    background-repeat: no-repeat;
+    right: -162px;
+}
+
 .discover {
     background: #E0EEFF80;
     border: 2px dashed #1177FF;
@@ -257,6 +283,9 @@
 }
 
 @media (max-width: 992px) {
+    .bt_text {
+        font-size: 18px;
+    }
 
     .congrats_text,
     .fs-64 {
@@ -304,18 +333,47 @@
         font-size: 22px;
     }
 
+    .winners_text.ca-1::after,
+    .banner__form.ca-1::after {
+        content: "";
+        background-image: url(../images/curly_arrow2.png);
+        background-size: contain;
+        width: 170px;
+        height: 115px;
+        position: absolute;
+        transform: translateY(15%) translateX(-13%) rotate(14deg);
+        background-repeat: no-repeat;
+        right: -162px;
+    }
 }
 
 @media (max-width: 500px) {
+    .bt_text {
+        font-size: 12px;
+    }
 
+    .congrats_text,
+    .fs-64 {
+        font-size: 30px;
+    }
+
+    .checklist_text {
+        font-size: 18px;
+    }
+    .winners_text{
+        max-width: 100%;
+    
+    }
+    .winners_text.ca-1::after,
+    .banner__form.ca-1::after,
     .timer::before,
     .timer::after {
         display: none;
     }
 
-    .timer {
+    .timer { 
         padding: 14px 20px;
-        width: 100%;
+        width: 90%;
     }
 
     .timer_Cards {
@@ -325,6 +383,10 @@
 
     .timer_Cards .card {
         min-height: fit-content;
+    }
 
+    .bg-light-bottom {
+        padding-top: 30px;
+        padding-bottom: 30px;
     }
 }
