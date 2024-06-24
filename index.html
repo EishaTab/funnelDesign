@@ -15,55 +15,58 @@
     <!-- --------------------->
     <div class="bt_main"> </div>
     <div class="p_main text-center">
-        <div class=" flex-column d-flex gap_24  align-items-center justify-content-between px-4">
-            <h1 class=" fw-bolder mb-0 ms-2 congrats_text"><span class="text-main">Congrats</span> !! You're in 🎉</h1>
+        <div class=" flex-column d-flex gap_24  align-items-center justify-content-between px-0">
+            <h1 class=" fw-bolder mb-0 congrats_text px-2 px-md-3"><span class="text-main ">Congrats</span> !! You're in 🎉</h1>
             <img src="/assets/images/arrow_down.png" />
-            <h1 class="mb-0  fw-bolder mt-4 color_blue fs-64">Here's What You Have To Do Next</h1>
+            <h1 class="mb-0  fw-bolder mt-4 color_blue fs-64 px-2 px-md-3">Here's What You Have To Do Next</h1>
             <div class="timer">
                 <p class="timer_count mb-0 fw-bolder">12:00 pm </p>
                 <p class="timer_text mb-0">Every Day At 12:00pm EST You'll Receive A Breakouts Email</p>
             </div>
-            <p class="timer_text">
+            <p class="timer_text px-2 px-md-3">
                 While you wait for your 12:00PM breakout alerts, we <br /> have an
                 <span class="color_blue">
                     exclusive offer
                 </span> for you.
             </p>
             <div>
-                <p class="color_blue upgrade  fw-bolder">
+                <p class="color_blue upgrade  fw-bolder px-2 px-md-3">
                     Upgrade your plan now for a limited <br /> time... And get breakouts right
                 </p>
-                <p class="after_text  fst-italic fw-semibold">
+                <p class="after_text  fst-italic fw-semibold px-2 px-md-3">
                     after the open and before market close !!
                 </p>
             </div>
             <div class="  d-flex  flex-column  align-items-center justify-content-center opp">
-                <p class=" text-danger fw-semibold timer_text">Don't miss this limited time opportunity</p>
+                <p class=" text-danger fw-semibold timer_text px-2 px-md-3">Don't miss this limited time opportunity</p>
                 <div class="bg-main rounded-2 mt-4 p-2 px-3 d-flex align-items-center banner__form">
                     <img src="../assets/images/arrow_up.png" />
-                    <div class="text-white break_text  ms-3  fw-bold">
+                    <div class="text-white break_text  ms-3  fw-bold px-2 px-md-3">
                         Get 3x more breakouts for just $7/month
                     </div>
                 </div>
-                <p class=" text-success fw-semibold timer_text">You might miss your next big winners for just $7</p>
+                <p class=" text-success fw-semibold timer_text px-2 px-md-3">You might miss your next big winners for just $7</p>
                 <!--  -->
-                <div class="timer_Cards row justify-content-center align-items-center ">
-                    <div class="col-12 col-lg-4 mb-3 mb-md-0 d-flex flex-column flex-lg-row align-items-center gap-4">
+                <div
+                    class="timer_Cards row  gap-lg-0 flex-lg-nowrap justify-content-center align-items-center container-fluid ">
+                    <div
+                        class="col-12 col-md-6 col-lg-4 mb-3 mb-md-0 d-flex px-3 flex-column flex-lg-row align-items-center gap-4 card1 position-relative">
                         <div class="card card_green text-center">
                             <p class="timer_count fw-bolder">9:45am</p>
                             <p class="timer_text mb-0">Receive Breakouts Email</p>
                             <span>exclusive <br /> offer</span>
                         </div>
-                        <img src="../assets/images/plus.png" />
-                    </div> 
-                    <div class="col-12 col-lg-4 mb-3 mb-md-0 d-flex  flex-column flex-lg-row align-items-center gap-4">
+                        <!-- <img src="../assets/images/plus.png" /> -->
+                    </div>
+                    <div
+                        class="col-12 col-md-6  col-lg-4 mb-3 mb-md-0 d-flex m-w-fit px-3  flex-column flex-lg-row align-items-center gap-4 card2 position-relative">
                         <div class="card card_included text-center">
                             <p class="timer_count fw-bolder">12:00pm</p>
                             <p class="timer_text mb-0">It's included</p>
                         </div>
-                        <img src="../assets/images/plus.png" />
-                    </div> 
-                    <div class="col-12 col-lg-4">
+                        <!-- <img src="../assets/images/plus.png" /> -->
+                    </div>
+                    <div class="col-12 col-md-6  col-lg-4 px-3 ">
                         <div class="card card_green text-center">
                             <p class="timer_count fw-bolder">3:00pm</p>
                             <p class="timer_text mb-0">Receive Breakouts Email <br /> End of Day</p>
@@ -138,7 +141,7 @@
                                             aria-describedby="emailHelp">
                                     </div>
                                 </div>
-                                <div class="row">
+                                <div class="row align-items-end">
                                     <div class="col-12 col-md-4 text-start">
                                         <select class="form-control mb-3" id="month">
                                             <option value="" disabled selected>Month</option>
@@ -157,6 +160,8 @@
                                         </select>
                                     </div>
                                     <div class="col-12 col-md-4 text-start">
+
+                                        <label for="year" class=" fw-bold">Expiry Year*</label>
                                         <select class="form-control mb-3" id="year">
                                             <option value="" disabled selected>Expiry year</option>
                                             <!-- Add the range of years as per your requirement -->
@@ -171,7 +176,7 @@
                                         </select>
                                     </div>
                                 </div>
-                                
+
                             </div>
                         </form>
                     </div>
@@ -195,7 +200,7 @@
                     </div>
                 </div>
                 <!--  -->
-                <div class="row discover">
+                <div class="row container-fluid discover">
                     <div class="col-12 col-lg-9 text-start px-3 ">
                         <form>
                             <div class="mb-0 form-check">
@@ -221,7 +226,7 @@
                 </div>
                 <!--  -->
                 <div class="bg-main rounded-2 mt-4 p-2 px-3 d-flex align-items-center banner__form">
-                    <img src="../assets/images/arrow_up.png"/>
+                    <img src="../assets/images/arrow_up.png" />
                     <div class="text-white break_text  ms-3  fw-bold">
                         Get 3x more breakouts for just $7/month
                     </div>
