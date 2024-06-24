@@ -345,6 +345,10 @@
         background-repeat: no-repeat;
         right: -162px;
     }
+    .after_text,
+    .winners_text{
+        font-size: 22px;
+    }
 }
 @media (max-width: 576px) {
     .card1::after, .card2::after{
