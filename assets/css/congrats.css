@@ -354,7 +354,7 @@
 
     .congrats_text,
     .fs-64 {
-        font-size: 30px;
+        font-size: 42px;
     }
 
     .checklist_text {
@@ -388,5 +388,22 @@
     .bg-light-bottom {
         padding-top: 30px;
         padding-bottom: 30px;
+    }
+}
+@media (max-width: 768px) {
+    .card1::after, .card2::after {
+      content: inherit !important;
+    }
+    .lap_img img {
+        width: 100%;
+    }
+    .after_text {
+        font-size: 32px;
+    }
+    .upgrade {
+        font-size: 21px;
+    }
+ .fs-64 {
+        font-size: 33px;
     }
 }
