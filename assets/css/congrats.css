@@ -2,10 +2,6 @@
     --bg_blue_main: #1177FF
 }
 
-* {
-    /* max-width: 100vw;  */
-}
-
 .bt_main {
     width: 100%;
     background-image: url('../images/bt.png');
@@ -30,9 +26,6 @@
     padding: 50px 0 0 0;
 }
 
-.color_blue {
-    color: var(--bg_blue_main);
-}
 
 .gap_24 {
     gap: 24px;
@@ -196,7 +189,7 @@
 }
 
 .bg-light-blue {
-    background-color: #E0EEFFCC;
+    background-color: var(--bg-light-blue);
     background-image: url('../images/bg-chart.png');
     background-size: cover;
     background-position: center;
@@ -210,7 +203,7 @@
 
 .bg-light-blue::after {
     content: "";
-    background-color: #E0EEFFCC;
+    background-color: var(--bg-light-blue);
     position: absolute;
     top: 0;
     left: 0;
@@ -236,7 +229,7 @@
 }
 
 .bg-light-bottom {
-    background: #EFEFEF;
+    background: var(--bg-light-pink);
     /* width: 100vw; */
     height: 100%;
     position: relative;
