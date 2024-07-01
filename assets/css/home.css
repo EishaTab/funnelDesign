@@ -5,6 +5,14 @@
     font-size: 24px;
 }
 
+.h-100p {
+    height: 100%;
+    min-height: 100%;
+}
+
+/* *{
+    border: 1px red solid;
+} */
 nav,
 .odd {
     background-color: var(--bg-light-blue);
@@ -37,10 +45,17 @@ nav,
     font-size: 40px;
 }
 
-.stocks h1 {
-    font-size: 58px;
+.stocks {
+    z-index: 2;
 }
 
+.heading,
+.stocks h1 {
+    font-size: 58px;
+    font-weight: 700;
+}
+
+.subheading,
 .stocks p {
     font-size: 32px;
 }
@@ -89,6 +104,11 @@ nav,
     border-radius: 20px;
 }
 
+.stats_inner {
+    overflow: hidden;
+    z-index: 1;
+}
+
 .stats .stats_text {
     max-width: 80vw;
 }
@@ -101,21 +121,26 @@ nav,
     font-size: 32px;
 }
 
-.stats_sub h1{
-font-size: 48px;
+.stats_sub h1 {
+    font-size: 48px;
 }
-.stats_sub p{
-font-size: 32px;
+
+.stats_sub p {
+    font-size: 32px;
 }
+
 .stats .stats_text p {
     font-size: 48px;
     font-weight: 500;
     line-height: 51px;
     color: black;
 }
+
 .stats {
-    position: relative; /* Ensure the pseudo-element is positioned relative to this div */
-    z-index: 1; /* Set z-index to 1 to make sure content is above the pseudo-element */
+    position: relative;
+    /* Ensure the pseudo-element is positioned relative to this div */
+    z-index: 1;
+    /* Set z-index to 1 to make sure content is above the pseudo-element */
 }
 
 .stats::after {
@@ -123,36 +148,217 @@ font-size: 32px;
     content: "";
     background-image: url(../images/stats_after.png);
     background-size: contain;
-    width: 700px;
-    height: 513px;
+    width: 50vw;
+    height: 51%;
     position: absolute;
-    bottom: 0;
+    bottom: 0px;
     right: 0;
-    z-index: 0; /* Set z-index to 0 to make sure it is below the .stats content */
+    z-index: 0;
+    background-position-x: right;
+    background-position-y: bottom;
 }
 
 /* Discover */
-.discover::before{
+.discover::before {
     background-repeat: no-repeat;
     content: "";
     background-image: url(../images/discover_before.png);
     background-size: contain;
-    width: 700px;
-    height: 513px;
+    width: 50vw;
+    height: 85%;
     position: absolute;
     top: 0;
     left: 0;
+    background-position-x: left;
+    background-position-y: top;
 }
+
+.discover ul {
+    width: fit-content;
+    margin: auto;
+}
+
+.discover ul li {
+    position: relative;
+    padding-left: 36px;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: start;
+}
+
+.discover ul li::before {
+    background-repeat: no-repeat;
+    content: "";
+    background-image: url(../images/tick.png);
+    background-size: contain;
+    width: 25px;
+    height: 22px;
+    position: absolute;
+    top: 8px;
+    left: 0;
+}
+
+.discover button {
+    .rating ul {
+        width: fit-content;
+        margin: auto;
+        display: flex;
+        gap: 22px;
+        flex-direction: column;
+        padding-top: 60px
+    }
+
+    .rating .container {
+        max-width: 1138px;
+    }
+
+    .rating .subheading {
+        color: #303030;
+
+    }
+
+    .rating ul li {
+        background-color: var(--bg-light-blue);
+        padding: 14px 32px;
+    }
+
+    .rating ul li p {
+        font-size: 32px;
+        line-height: 43.2px;
+        text-align: left;
+        color: black;
+    }
+
+    .rating ul li b {
+        font-weight: 700;
+    }
+
+    font-size: 48px;
+    font-weight: 700px;
+}
+
+/* Updates */
+.get-started-btn {
+    font-size: 48px !important;
+    padding: 13px 75px !important;
+    color: white !important;
+}
+
+.update_shadhow {
+    height: 100%;
+    /* background: red; */
+}
+
+.update_shadhow .updates p:first-child {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 48.6px;
+    letter-spacing: -0.02em;
+    color: black;
+}
+
+.update_shadhow .updates p:nth-child(2) {
+    font-size: 24px;
+    font-weight: 500;
+    color: #3C3A3A;
+    line-height: 32.4px;
+}
+
+.row .update_shadhow .updates p:first-child {
+    font-size: 24px
+}
+
+.row .update_shadhow .updates p:nth-child(2) {
+    font-size: 16px;
+}
+
+.updates button {
+    padding: 10px 0;
+    color: var(--bg_blue_main);
+    font-size: 21px;
+    font-weight: 500;
+}
+
+.updates button:hover {
+    color: var(--bg_blue_main);
+    outline: none;
+    border: none
+}
+
+.updates button span {
+    padding-left: 10px;
+
+}
+
+.updates_container {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    background-image: linear-gradient(63.63deg, rgba(17, 119, 255, 0.7) 0.64%, rgba(10, 71, 153, 0.7) 98.74%);
+    padding: 0;
+    width: fit-content;
+    margin: auto;
+    overflow: hidden;
+    min-height: 100%;
+
+}
+
+.update_shadhow {
+    box-shadow: 0px 0px 124.2px 9px #1177FF12;
+
+}
+
+.updates_inner .row {
+    background-color: white;
+    padding-left: 55px
+}
+
+/* Ratings */
+.rating ul {
+    width: fit-content;
+    margin: auto;
+    display: flex;
+    gap: 22px;
+    flex-direction: column;
+    padding-top: 60px
+}
+
+.rating .container {
+    max-width: 1138px;
+}
+
+.rating .subheading {
+    color: #303030;
+
+}
+
+.rating ul li {
+    background-color: var(--bg-light-blue);
+    padding: 14px 32px;
+}
+
+.rating ul li p {
+    font-size: 32px;
+    line-height: 43.2px;
+    text-align: left;
+    color: black;
+}
+
+.rating ul li b {
+    font-weight: 700;
+}
+
+.gap-19 {
+    gap: 19px;
+}
+
 /* Upgrade section */
 .upgrade {
-
     padding: 70px;
 }
 
 .upgrade h1 {
     font-size: 96px;
     font-weight: 900;
-    /* line-height: 129.6px; */
     line-break: normal;
 }
 
@@ -172,6 +378,35 @@ font-size: 32px;
     font-size: 20px;
     font-family: sans-serif;
     padding-top: 10px;
+}
+
+.get-started-text {
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 54px;
+    color: black;
+}
+
+/* edge */
+.edge .container {
+    padding-top: 60px;
+    max-width: 990px !important;
+}
+
+.edge-desc,
+.edge-subHeading {
+    font-size: 40px;
+    color: var(--bg_blue_main);
+    font-weight: 500;
+    line-height: 54px;
+}
+
+.edge-desc {
+    color: black;
+}
+
+.edge-desc span {
+    color: var(--bg_blue_main);
 }
 
 /* Footer */
@@ -290,7 +525,168 @@ p {
     padding: 17px;
 }
 
+/* faqs */
+.faqs .heading {
+    padding-bottom: 60px;
+}
+
+.faqs .accordion-item {
+    border-radius: 20px !important;
+    background-color: white;
+    margin-bottom: 20px !important;
+}
+
+.faqs .accordion-button:not(.collapsed) {
+    border-top-left-radius: 20px !important;
+    border-top-right-radius: 20px !important;
+    background-color: white !important;
+    color: black !important;
+}
+
+.faqs .accordion-button {
+    background-color: white;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 43.2px;
+    text-align: left;
+    color: black !important;
+}
+
+.faqs .accordion-body {
+    text-align: start !important;
+    font-size: 24px !important;
+}
+
+.faqs .accordion-button.collapsed {
+    border-radius: 20px !important;
+}
+
+.faqs .accordion-button::after {
+    background-image: url(../images/triangle.png);
+    background-repeat: no-repeat;
+    transition: transform 0.3s ease-in-out;
+}
+
+.faqs .accordion-button:not(.collapsed)::after {
+    transform: var(--bs-accordion-btn-icon-transform);
+}
+
+.packages ul li {
+    position: relative;
+    padding: 13px 12px 13px 49px;
+    font-size: 16px;
+    font-size: 500;
+
+}
+.packages .professional button,
+.packages .standard button,
+.packages .free button {
+    width: 100%;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 21.6px;
+    padding: 11px ;
+    margin: 14px auto 20px auto;
+
+}
+
+.packages ul li:not(.false)::before {
+    background-repeat: no-repeat;
+    content: "";
+    background-image: url(../images/done.png);
+    background-size: contain;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 8px;
+    left: 0;
+}
+
+.packages ul li.false::before {
+    background-repeat: no-repeat;
+    content: "";
+    background-image: url(../images/false.png);
+    background-size: contain;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 8px;
+    left: 0;
+}
+.packages .card.free{
+    border: 1px solid #1177FF
+}
+.packages .card{
+    padding:32px 24px;
+    border-radius: 20px;
+    position: relative;
+}
+.packages .card .card-title{
+    font-size: 40px;
+}
+.packages .card .card-desc{
+    font-size: 16px;
+   
+}
+.packages .card.free .card-desc{
+     color: #64748B;
+}
+.packages .card .price{ 
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 86.4px; 
+}
+.packages .card .time{ 
+    font-size:20px;
+    color:#4B5768;
+    line-height: 86.4px; 
+}
+.packages .card::after{
+    background-repeat: no-repeat;
+    content: "";
+    background-image: url(../images/cards_after.png);
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    background-position-x: right;
+    background-position-y:top;
+}
+.card.standard{
+    background-color:  #1177FF;
+    color: white;
+}
+.card.professional{
+    background-color:  #04AC33;
+    color: white;
+}
+.packages .professional button,
+.packages .standard button{
+    color: white;
+    border-color: white;
+}
+
+.packages .card.professional .card-desc,
+.packages .card.standard .card-desc{
+    color: white;
+}
+.packages .card.professional .time,
+.packages .card.standard .time{
+    color: white;
+}
+.card-body{
+    padding: 0 !important;
+}
 /* Responsiveness */
+@media (min-width: 992px) {
+    .first-column-lg {
+        height:80%; /* 80% of the viewport height */
+        max-height: 80%; /* Max height to ensure it doesn't exceed 80% in case of shorter content */
+        overflow-y: auto; /* Add scrollbar if content exceeds the height */
+    }
+}
 
 @media (max-width:991px) {
 
@@ -299,10 +695,12 @@ p {
         padding: 40px 20px;
     }
 
+    .heading,
     .stocks h1 {
         font-size: 40px;
     }
 
+    .subheading,
     .stocks p {
         font-size: 28px;
     }
@@ -310,17 +708,52 @@ p {
     .stats .stats_text p {
         font-size: 32px;
     }
+
     .stats_header h1 {
         font-size: 42px;
     }
+
     .stats_sub p,
     .stats_header p {
         font-size: 28px;
     }
-    
-    .stats_sub h1{
-    font-size: 38px;
-    } 
+
+    .stats_sub h1 {
+        font-size: 38px;
+    }
+
+    .discover ul li {
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    .discover button {
+        padding: 8px 30px;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 32px;
+    }
+
+    .get-started-text {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    .get-started-btn {
+        padding: 8px 30px !important;
+        font-size: 32px !important;
+    }
+
+    .update_shadhow .updates p:first-child,
+    .row .update_shadhow .updates p:first-child {
+        font-size: 24px;
+    }
+
+    .update_shadhow .updates p:nth-child(2),
+    .row .update_shadhow .updates p:nth-child(2) {
+        font-size: 16px;
+    }
+
     .upgrade {
         padding: 30px;
     }
@@ -345,8 +778,13 @@ p {
         padding-left: 0
     }
 }
-
+@media (min-width: 768px) {
+    .packages .card.free{
+        min-height: 886px;
+    }
+}
 @media (max-width: 768px) {
+   
     .upgrade {
         padding: 10px;
     }
@@ -358,6 +796,58 @@ p {
     .upgrade button {
         font-size: 28px;
     }
+
+    .edge-desc,
+    .edge-subHeading {
+        font-size: 32px;
+    }
+
+    .edge .container {
+        padding-top: 30px;
+    }
+
+    .rating ul {
+        width: fit-content;
+        margin: auto;
+        display: flex;
+        gap: 22px;
+        flex-direction: column;
+        padding-top: 60px
+    }
+
+    .rating .subheading {
+        color: #303030;
+
+    }
+
+    .rating ul li p {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    .rating ul li b {
+        font-weight: 600;
+    }
+
+    .faqs .accordion-button {
+        font-size: 22px !important;
+        ;
+        line-height: 24px !important;
+        ;
+    }
+
+    .faqs .accordion-body {
+        font-size: 16px !important;
+    }
 }
 
-@media (max-width: 500px) {}
+@media (max-width: 500px) {
+    .rating ul li {
+        flex-direction: column;
+    }
+
+    .rating ul li p {
+        font-size: 18px;
+        line-height: 20px;
+    }
+}
