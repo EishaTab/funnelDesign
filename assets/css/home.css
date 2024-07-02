@@ -801,14 +801,16 @@ p {
     border-radius: 25px;
     max-width: 80vw;
     box-shadow: 0px 0px 75px 0px #00000026;
-    margin-top: -56px;
+    margin-top: -100px;
 
 }
 
 .edge-sub {
     font-weight: 700;
 }
-
+.testimnoials{
+    padding-bottom: 100px;
+}
 .testimnoials .subheading {
     color: #303030;
 
