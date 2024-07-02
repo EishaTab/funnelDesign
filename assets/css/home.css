@@ -37,9 +37,6 @@ nav,
     height: 48px
 }
 
-.top_section {
-    padding-bottom: 64px;
-}
 
 .logo_top {
     font-size: 40px;
@@ -60,6 +57,10 @@ nav,
     font-size: 32px;
 }
 
+.hero {
+    background-image: url(../images/hero-bg.png);
+}
+
 .video_section .video {
     border: 2px solid #E2E9F0;
     border-radius: 30px;
@@ -71,7 +72,7 @@ nav,
     z-index: 5;
 }
 
-.video_section::after {
+.stats.images::after {
     background-repeat: no-repeat;
     content: "";
     background-image: url(../images/curl_right.png);
@@ -83,7 +84,7 @@ nav,
     right: -50px;
 }
 
-.video_section::before {
+.stats.images::before {
     background-repeat: no-repeat;
     content: "";
     background-image: url(../images/curl_left.png);
@@ -92,7 +93,7 @@ nav,
     height: 411px;
     position: absolute;
     bottom: 0;
-    left: -70px;
+    left: 0;
 }
 
 /* Stats section */
@@ -105,12 +106,13 @@ nav,
 }
 
 .stats_inner {
-    overflow: hidden;
+    /* overflow: hidden; */
     z-index: 1;
 }
 
 .stats .stats_text {
     max-width: 80vw;
+
 }
 
 .stats_header h1 {
@@ -136,41 +138,76 @@ nav,
     color: black;
 }
 
-.stats {
+.stats .stats_text p,
+.stats_sub,
+.stats_image {
+
     position: relative;
-    /* Ensure the pseudo-element is positioned relative to this div */
     z-index: 1;
-    /* Set z-index to 1 to make sure content is above the pseudo-element */
 }
 
+.edge,
+.rating,
+.offers,
+.rating .container,
+.testimnoials,
+.updates-main,
+.packages,
+.packages .container,
+.faqs,
+.faqs .container,
+.get-started,
+.stats,
+.stats .stats_inner {
+    position: relative;
+    z-index: 1;
+}
+
+.offers::after,
+.updates-main::after,
+.rating::after,
+.faqs::after,
 .stats::after {
     background-repeat: no-repeat;
     content: "";
     background-image: url(../images/stats_after.png);
-    background-size: contain;
-    width: 50vw;
-    height: 51%;
+    width: 100%;
+    height: 100%;
     position: absolute;
     bottom: 0px;
     right: 0;
     z-index: 0;
     background-position-x: right;
     background-position-y: bottom;
+    opacity: 0.8;
 }
 
-/* Discover */
+.packages::before,
+.testimnoials::before,
+.edge::before,
 .discover::before {
     background-repeat: no-repeat;
     content: "";
     background-image: url(../images/discover_before.png);
-    background-size: contain;
-    width: 50vw;
-    height: 85%;
+    width: 100%;
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
     background-position-x: left;
     background-position-y: top;
+    z-index: 1;
+    opacity: 0.8;
+}
+
+.faqs::after,
+.offers::after {
+    background-image: url(../images/discount-after.png);
+}
+
+.packages::before {
+    background-image: url(../images/packages-before.png);
+
 }
 
 .discover ul {
@@ -199,42 +236,48 @@ nav,
 }
 
 .discover button {
-    .rating ul {
-        width: fit-content;
-        margin: auto;
-        display: flex;
-        gap: 22px;
-        flex-direction: column;
-        padding-top: 60px
-    }
 
-    .rating .container {
-        max-width: 1138px;
-    }
-
-    .rating .subheading {
-        color: #303030;
-
-    }
-
-    .rating ul li {
-        background-color: var(--bg-light-blue);
-        padding: 14px 32px;
-    }
-
-    .rating ul li p {
-        font-size: 32px;
-        line-height: 43.2px;
-        text-align: left;
-        color: black;
-    }
-
-    .rating ul li b {
-        font-weight: 700;
-    }
 
     font-size: 48px;
     font-weight: 700px;
+}
+
+.rating {
+    background-image: url(../images/rating-bg.png);
+}
+
+.rating ul {
+    width: fit-content;
+    margin: auto;
+    display: flex;
+    gap: 22px;
+    flex-direction: column;
+    padding-top: 60px
+}
+
+.rating .container {
+    max-width: 1138px;
+}
+
+.rating .subheading {
+    color: #303030;
+
+}
+
+.rating ul li {
+    background-color: var(--bg-light-blue);
+    padding: 14px 32px;
+}
+
+.rating ul li p {
+    font-size: 32px;
+    line-height: 43.2px;
+    text-align: left;
+    color: black;
+}
+
+.rating ul li b {
+    font-weight: 700;
 }
 
 /* Updates */
@@ -578,6 +621,7 @@ p {
     font-size: 500;
 
 }
+
 .packages .professional button,
 .packages .standard button,
 .packages .free button {
@@ -585,7 +629,7 @@ p {
     font-size: 16px;
     font-weight: 700;
     line-height: 21.6px;
-    padding: 11px ;
+    padding: 11px;
     margin: 14px auto 20px auto;
 
 }
@@ -613,35 +657,43 @@ p {
     top: 8px;
     left: 0;
 }
-.packages .card.free{
+
+.packages .card.free {
     border: 1px solid #1177FF
 }
-.packages .card{
-    padding:32px 24px;
+
+.packages .card {
+    padding: 32px 24px;
     border-radius: 20px;
     position: relative;
 }
-.packages .card .card-title{
+
+.packages .card .card-title {
     font-size: 40px;
 }
-.packages .card .card-desc{
+
+.packages .card .card-desc {
     font-size: 16px;
-   
+
 }
-.packages .card.free .card-desc{
-     color: #64748B;
+
+.packages .card.free .card-desc {
+    color: #64748B;
 }
-.packages .card .price{ 
+
+.packages .card .price {
     font-size: 64px;
     font-weight: 700;
-    line-height: 86.4px; 
+    line-height: 86.4px;
 }
-.packages .card .time{ 
-    font-size:20px;
-    color:#4B5768;
-    line-height: 86.4px; 
+
+.packages .card .time {
+    font-size: 20px;
+    color: #4B5768;
+    line-height: 86.4px;
 }
-.packages .card::after{
+
+.packages .card::after {
     background-repeat: no-repeat;
     content: "";
     background-image: url(../images/cards_after.png);
@@ -652,45 +704,323 @@ p {
     right: 0;
     z-index: 2;
     background-position-x: right;
-    background-position-y:top;
+    background-position-y: top;
 }
-.card.standard{
-    background-color:  #1177FF;
+
+.card.standard {
+    background-color: #1177FF;
     color: white;
 }
-.card.professional{
-    background-color:  #04AC33;
+
+.card.professional {
+    background-color: #04AC33;
     color: white;
 }
+
 .packages .professional button,
-.packages .standard button{
+.packages .standard button {
     color: white;
     border-color: white;
 }
 
 .packages .card.professional .card-desc,
-.packages .card.standard .card-desc{
+.packages .card.standard .card-desc {
     color: white;
 }
+
 .packages .card.professional .time,
-.packages .card.standard .time{
+.packages .card.standard .time {
     color: white;
 }
-.card-body{
+
+.card-body {
     padding: 0 !important;
 }
+
+.payment-plans::after {
+    background-repeat: no-repeat;
+    content: "";
+    background-image: url(../images/discount.png);
+    width: 186px;
+    height: 86px;
+    position: absolute;
+    bottom: -22px;
+    right: 0px;
+    z-index: 2;
+    background-position-x: right;
+    background-position-y: bottom;
+}
+
+.payment-plans span {
+    font-size: 24px;
+    line-height: 32.4px;
+}
+
+.payment-plans.container-sm {
+    max-width: 800px;
+}
+
+.money-back-text h1 {
+    font-size: 64px;
+    font-weight: 900;
+    line-height: 86.4px;
+    text-align: center;
+    color: #04AC33;
+}
+
+.money-back-btn button::after {
+    background-repeat: no-repeat;
+    content: "";
+    background-image: url(../images/free2.png);
+    width: 152.5px;
+    height: 147.76px;
+    position: absolute;
+    z-index: 2;
+    background-position-x: right;
+    background-position-y: top;
+    top: -82px;
+
+}
+
+.money-back-btn button {
+    font-size: 36px;
+    font-weight: 900;
+    line-height: 36px;
+    padding: 24px 50px;
+}
+
+.money-back-btn p {
+    font-family: Sen;
+    font-size: 32px;
+    font-weight: 400;
+    color: #04AC33;
+    padding-top: 20px;
+}
+
+.get-started {
+    border-radius: 25px;
+    max-width: 80vw;
+    box-shadow: 0px 0px 75px 0px #00000026;
+    margin-top: -56px;
+
+}
+
+.edge-sub {
+    font-weight: 700;
+}
+
+.testimnoials .subheading {
+    color: #303030;
+
+}
+
+/* Testimonials */
+.creative-carousal--hero {
+    width: 100%;
+    height: 400px;
+    /* height: 100vh; */
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.creative-carousal--hero .carousel-slider {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.creative-carousal--hero .carousel-slider .swiper-slide {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.creative-carousal--hero .carousel-slider .swiper-slide.swiper-slide-active {
+    z-index: 3;
+}
+
+.creative-carousal--hero .carousel-slider .swiper-slide:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* background: #222327; */
+    opacity: 0.7;
+}
+
+.creative-carousal--hero .carousel-slider .swiper-slide.swiper-slide-active:after {
+    opacity: 0.4;
+}
+
+.creative-carousal--hero .carousel-slider .swiper-slide .inner {
+    width: 100%;
+    /* max-width: 200px; */
+    display: block;
+    text-align: center;
+    color: black;
+    position: relative;
+    z-index: 2;
+    /* opacity: 0; */
+    -webkit-transition: 0.25s ease-in-out;
+    -moz-transition: 0.25s ease-in-out;
+    -ms-transition: 0.25s ease-in-out;
+    -o-transition: 0.25s ease-in-out;
+    transition: 0.25s ease-in-out;
+}
+
+.creative-carousal--hero .carousel-slider .swiper-slide .inner .name {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.creative-carousal--hero .carousel-slider .swiper-slide .inner .role {
+    font-size: 18px;
+}
+
+.creative-carousal--hero .carousel-slider .swiper-slide .inner .review {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21.6px; 
+    color: #272727;
+}
+
+.creative-carousal--hero .carousel-slider .swiper-slide.swiper-slide-active .inner {
+    opacity: 1;
+    width: 100%;
+
+}
+
+.creative-carousal--hero .carousel-slider .swiper-slide.swiper-slide-active .inner::after {
+    /* opacity: 1;
+    background-image: url(../images/testimonials2.png); */
+    width: 100%;
+    height: 100%;
+    background-position-y: center;
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+    z-index: 0;
+    background-position-x: center;
+    background-position-y: center;
+}
+.creative-carousal--hero .slide-progress {
+    width: 220px;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    margin-left: -110px;
+    z-index: 3;
+    text-align: center;
+    bottom: -34px;
+}
+
+.creative-carousal--hero .slide-progress span {
+   
+    width: 17px;
+    height: 17px;
+    margin: 0 8px !important;
+}
+.swiper-button-next::after, .swiper-button-prev::after {
+    font-size: 20px !important;
+    font-weight: 700;
+    bottom: 12px;
+}
+.creative-carousal--hero .swiper-button-prev {
+    height: auto;
+    position: absolute;
+    left: auto;
+    top: auto;
+    left: 0px; 
+    bottom: 12px;
+    font-family: "Fjalla One", sans-serif;
+    color: var(--bg_blue_main);
+    background: none;
+}
+.inner .content{
+    z-index: 2;
+}
+
+.creative-carousal--hero .swiper-button-next {
+    height: auto;
+    position: absolute;
+    left: auto;
+    top: auto;
+    right: 0; 
+    bottom: 12px;
+    font-family: "Fjalla One", sans-serif;
+    color: var(--bg_blue_main);
+    background: none;
+}
+
+/* ====================== Responsive Ipad =============================== */
+@media (max-width: 991px) {
+    .creative-carousal--hero .carousel-slider .swiper-slide .inner h2 {
+        font-size: 7vw;
+        line-height: 7vw;
+        margin-bottom: 15px;
+    }
+}
+
+/* ====================== Responsive Iphone =============================== */
+@media screen and (max-width: 767px) {
+    .creative-carousal--hero .carousel-slider .swiper-slide .inner h2 {
+        font-size: 12vw;
+        line-height: 12vw;
+        margin-bottom: 15px;
+    }
+
+    .creative-carousal--hero .swiper-button-prev {
+        left: 40px;
+    }
+
+    .creative-carousal--hero .swiper-button-next {
+        right: 40px;
+    }
+}
+
+@media (max-width:1160px) {
+    .money-back-btn button {
+        font-size: 24px;
+    }
+}
+
 /* Responsiveness */
 @media (min-width: 992px) {
     .first-column-lg {
-        height:80%; /* 80% of the viewport height */
-        max-height: 80%; /* Max height to ensure it doesn't exceed 80% in case of shorter content */
-        overflow-y: auto; /* Add scrollbar if content exceeds the height */
+        height: 80%;
+        /* 80% of the viewport height */
+        max-height: 80%;
+        /* Max height to ensure it doesn't exceed 80% in case of shorter content */
+        overflow-y: auto;
+        /* Add scrollbar if content exceeds the height */
     }
 }
 
 @media (max-width:991px) {
 
-    .odd,
+    .packages::before,
+    .testimnoials::before,
+    .edge::before,
+    .discover::before,
+    .offers::after,
+    .updates-main::after,
+    .rating::after,
+    .faqs::after,
+    .stats::after {
+        width: 100vw;
+    }
+
     .even {
         padding: 40px 20px;
     }
@@ -777,14 +1107,28 @@ p {
     .footer-menu {
         padding-left: 0
     }
+
+    .money-back-btn button {
+        padding: 20px 4px;
+    }
+
+    .money-back-btn button::after {
+        right: -100px;
+    }
+
+    .money-back-btn {
+        margin-top: 97px;
+    }
 }
+
 @media (min-width: 768px) {
-    .packages .card.free{
+    .packages .card.free {
         min-height: 886px;
     }
 }
+
 @media (max-width: 768px) {
-   
+
     .upgrade {
         padding: 10px;
     }
@@ -839,6 +1183,45 @@ p {
     .faqs .accordion-body {
         font-size: 16px !important;
     }
+
+    .payment-plans::after {
+        bottom: -51px;
+        right: -21px;
+        background-position-y: bottom;
+        rotate: 16deg;
+    }
+
+    .money-back-btn button {
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+}
+
+@media (max-width:668px) {
+    .money-back-text h1 {
+        font-size: 40px;
+        font-weight: 900;
+        line-height: 53.4px;
+        text-align: center;
+        color: #04AC33;
+    }
+
+    .money-back-btn button::after {
+        right: 0;
+        rotate: -23deg;
+        translate: 11px -34px;
+    }
+
+    .money-back-text h1 {
+        /* transform: translateY(-56px); */
+    }
+
+    .money-back-btn p {
+        font-size: 18px;
+        padding-top: 10px;
+    }
+
 }
 
 @media (max-width: 500px) {
@@ -849,5 +1232,23 @@ p {
     .rating ul li p {
         font-size: 18px;
         line-height: 20px;
+    }
+
+    .payment-plans span {
+        font-size: 18px;
+        line-height: 32.4px;
+    }
+
+    .payment-plans::after {
+        bottom: -96px;
+        right: -49px;
+        background-position-y: bottom;
+        rotate: 35deg;
+    }
+
+    .money-back-text h1 {
+        font-size: 42px;
+        font-weight: 700;
+        line-height: 50px;
     }
 }

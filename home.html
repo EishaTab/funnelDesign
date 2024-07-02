@@ -8,38 +8,41 @@
     <link rel="stylesheet" href="./assets/css/bt5.2.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/home.css">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 <body>
-    <nav>
-        <div class="p-3 p-lg-5 py-lg-3 d-flex justify-content-between">
-            <div class="d-flex align-items-center logo_top ">
-                <img src="./assets/images/heart.png" alt="" srcset="">
-                <h5 class="text-main fw-bolder mb-0 ms-2">Breakouts & Setups</h5>
-            </div>
-            <div>
-                <button class=" btn btn-primary"> Dashboard</button>
-            </div>
-        </div>
-    </nav>
+   
     <!-----Hero ------------------>
-    <section class="odd top_section overflow-hidden text-center">
-
-        <div class="stocks position-relative  ">
-            <h1>Track The Top Stocks In The Markets... <br />
-                In Real Time</h1>
-            <p class="text-black pt-2 pb-3"> Experience Wall Street’s Edge To Find Top Stocks With Our Powerful
-                Dashboard</p>
-        </div>
-        <div class="video_section container-lg  position-relative">
-            <div class="video position-relative">
-                <img src="../assets/images/hero_video.png" alt="Hero_Video" class="img-fluid" />
+    <section class=" top_section hero overflow-hidden text-center ">
+        <nav>
+            <div class="p-3 p-lg-5 py-lg-3 d-flex justify-content-between">
+                <div class="d-flex align-items-center logo_top ">
+                    <img src="./assets/images/heart.png" alt="" srcset="">
+                    <h5 class="text-main fw-bolder mb-0 ms-2">Breakouts & Setups</h5>
+                </div>
+                <div>
+                    <button class=" btn btn-primary"> Dashboard</button>
+                </div>
+            </div>
+        </nav>
+        <div class="odd">
+            <div class="stocks position-relative    ">
+                <h1>Track The Top Stocks In The Markets... <br />
+                    In Real Time</h1>
+                <p class="text-black pt-2 pb-3"> Experience Wall Street’s Edge To Find Top Stocks With Our Powerful
+                    Dashboard</p>
+            </div>
+            <div class="video_section container-lg  position-relative">
+                <div class="video position-relative">
+                    <img src="../assets/images/hero_video.png" alt="Hero_Video" class="img-fluid" />
+                </div>
             </div>
         </div>
+      
     </section>
     <!------Stats ----------------->
-    <section style="padding-bottom: 0;" class="even stats   position-relative top_section overflow-hidden text-center">
+    <section class="even stats images  position-relative top_section overflow-hidden text-center">
         <div class=" position-relative stats_inner">
             <div class="stats_header">
                 <h1>Are You Missing Out on Big Market Moves?</h1>
@@ -84,7 +87,7 @@
         </div>
     </section>
     <!--- -------------------->
-    <section class="even  updates position-relative top_section px-lg-0 text-center">
+    <section class="even  updates updates-main position-relative top_section px-lg-0 text-center">
         <div class=" position-relative stats_inner">
             <div class="stats_header">
                 <h1>We Built Something For You</h1>
@@ -269,14 +272,37 @@
     <section class="odd edge text-center position-relative">
         <div>
             <h1 class="heading">Our Edge</h1>
+            <p class="subheading">Why Looking Ahead Matters More Than Looking Back</p>
         </div>
-        <div class="container-md container">
+        <div class="container pt-4 px-0 container-fluid">
+            <div class="row  justify-content-center align-items-center">
+                <div class="col-12 col-md-6 ">
+                    <div class="align-items-stretch flex-column d-flex justify-content-center gap-3 mt-3 card rounded-5 p-5 mx-3">
+                        <h1 class="edge-sub">Past</h1>
+                        <div>
+                            <img src="../assets/images/past_icon.png" alt=""></div>
+                        <img src="../assets/images/past_chart.png" alt="">
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 ">
+                    <div class="align-items-stretch flex-column d-flex justify-content-center gap-3 mt-3 card rounded-5 p-5 mx-3">
+                        <h1 class="edge-sub">Future</h1>
+                       <div>
+                        <img src="../assets/images/future_icon.png" class=" img-fluid img" alt="">
+                       </div> 
+                        <img src="../assets/images/future_chart.png" alt="">
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <!-- <div class="container-md container">
             <h2 class="edge-subHeading"> The Right Of The Chart</h2>
             <p class="edge-desc">
                 Most investors rely on the left side of the chart—the past—to make decisions. But here's a <span>
                     crucial
                     insight:</span> stocks discount the future - the right of the chart.</p>
-        </div>
+        </div> -->
     </section>
     <!---Ratings -------------------->
     <section class="even  rating position-relative top_section px-lg-0 text-center">
@@ -331,19 +357,92 @@
         </div>
     </section>
     <!--- Testimonials-------------------->
-    <!-- <section class="odd edge text-center position-relative">
-    </section> -->
+    <section class="odd testimnoials text-center position-relative mb-5">
+        <div class="container">
+            <div class="pb-5">
+                <h1 class="heading">Our testimonials </h1>
+                <p class="subheading">What Customer Say  About Us</p>
+            </div>
+            <section class="creative-carousal--hero">
+                <div class="carousel-slider swiper-container-horizontal">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" data-background="../assets/images/testimonials1.png" >
+                            <img src="../assets/images/testimonials1.png" alt="">
+                        </div>
+                        <div class="swiper-slide" data-background="../assets/images/testimonials2.png" >
+                            <div class="inner">
+                              
+                                <img src="../assets/images/testimonials2.png" alt="">
+                                
+                        </div>
+                        </div>
+                        <div class="swiper-slide" data-background="../assets/images/testimonials3.png" >
+                            <img src="../assets/images/testimonials3.png" alt="">
+                        </div>
+                    </div>
+                    <!-- End Of Swiper -->
+                    <div class="slide-progress">  
+                    <div class="swiper-button-prev">  </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <!-- end button-next -->
+                    </div>
+                </section>
+        </div>
+    </section>
     <!--- Get Started -------------------->
+    <section class="even get-started container container-fluid  text-center position-relative">
+        <div>
+            <h1 class="heading">How to get started</h1>
+        </div>
+        <div class="container">
+            <div class="row  justify-content-center align-items-center">
+                <div class="col-12 col-md-6">
+                    <img src="../assets/images/emails.png" alt="">
+                </div>
+                <div class="col-12 col-md-6">
+                    <img src="../assets/images/power.png" alt="">
+                </div>
+            </div>
+        </div>
+
+    </section>
     <!--- Offers -------------------->
-    <!-- <section class="odd edge text-center position-relative">
-    </section> -->
+    <section class="odd offers text-center position-relative position-relative">
+        <div class="container">
+            <div>
+                <h1 class="heading"> Stop Missing Out</h1>
+                <p class="subheading">We are sharing monster stocks with our members every day.</p>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-12 col-md-6">
+                    <div>
+                        <img src="../assets/images/cardPhone.png" class="img-fluid rounded-top" alt="Mobile" />
+
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 money-back-text">
+                    <h1>
+                        30-days <br /> Money-Back Guarantee
+                    </h1>
+                </div>
+
+            </div>
+        </div>
+        <div class="money-back-btn position-relative">
+            <button class=" btn btn-primary position-relative">Try our Breakouts Dashboard risk-free for 30 days
+            </button>
+            <p>This is your chance to make smarter, more informed investments.</p>
+        </div>
+    </section>
     <!--- Packages -------------------->
     <section class="even  packages position-relative top_section px-lg-0 text-center">
         <div class="container">
             <div>
                 <h1 class="heading">Unlock Access To Our Dashboard Now</h1>
-                <p>Discover Winning Stocks</p>
-                <div class=" d-flex align-items-center  justify-content-center gap-4">
+                <p style="color: #303030;" class=" subheading">Discover Winning Stocks</p>
+                <div
+                    class=" position-relative payment-plans mb-5 container-sm d-flex align-items-center  justify-content-center gap-2 gap-md-4">
                     <span>Pay Monthly</span>
                     <div class="form-check form-switch">
                         <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
@@ -351,7 +450,7 @@
                     <span>Pay Yearly</span>
                 </div>
             </div>
-            <div class="  text-start">
+            <div class="mt-4 mt-lg-5  text-start">
                 <div class="row align-items-center">
                     <div class="col-lg-4 mt-4 col-md-6 col-12 first-column-lg">
                         <!-- Free -->
@@ -362,7 +461,8 @@
                                     <p class="card-desc">
                                         Ideal for individuals who need quick access to basic features.
                                     </p>
-                                    <div class=" d-flex align-items-center gap-2"><span class="price">$0 </span><span class="time">/&nbsp;Month</span>
+                                    <div class=" d-flex align-items-center gap-2"><span class="price">$0 </span><span
+                                            class="time">/&nbsp;Month</span>
                                     </div>
                                     <button class="btn btn-outline-primary">Get Started Free</button>
                                     <ul>
@@ -383,7 +483,8 @@
                                     <p class="card-desc">
                                         Ideal for individuals who need quick access to basic features.
                                     </p>
-                                    <div class=" d-flex align-items-center gap-2"><span class="price">$49 </span><span class="time">/&nbsp;Month</span>
+                                    <div class=" d-flex align-items-center gap-2"><span class="price">$49 </span><span
+                                            class="time">/&nbsp;Month</span>
                                     </div>
                                     <button class="btn btn-outline-primary">Upgrade to Pro</button>
                                     <ul>
@@ -413,7 +514,8 @@
                                     <p class="card-desc">
                                         Ideal for individuals who need quick access to basic features.
                                     </p>
-                                    <div class=" d-flex align-items-center gap-2"><span class="price">$49 </span><span class="time">/&nbsp;Month</span>
+                                    <div class=" d-flex align-items-center gap-2"><span class="price">$49 </span><span
+                                            class="time">/&nbsp;Month</span>
                                     </div>
                                     <button class="btn btn-outline-primary">Upgrade to Pro</button>
                                     <ul>
@@ -668,5 +770,42 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
     integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
 </script>
-
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    $(document).ready(function() {
+        // SLIDER
+        var carouselslider = new Swiper('.carousel-slider', {
+          spaceBetween: 0,
+          slidesPerView: 3,
+          centeredSlides: true,
+          allowSlidePrev:true,
+          allowSlideNext:true,
+          autoplay: false,
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+          pagination: {
+            el: '.swiper-pagination', 
+          },
+          loop: false,
+          initialSlide: 1,
+          breakpoints: {
+            1024: {
+              slidesPerView: 3
+            },
+            768: {
+              slidesPerView: 2
+            },
+            640: {
+              slidesPerView: 1
+            },
+            320: {
+              slidesPerView: 1
+            }
+          }
+        });
+      });
+    </script> 
 </html>
